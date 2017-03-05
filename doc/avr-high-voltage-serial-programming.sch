@@ -1,0 +1,280 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:arduino
+LIBS:own-kicad-schema-library
+LIBS:avr-high-voltage-serial-programming-cache
+EELAYER 25 0
+EELAYER END
+$Descr User 5487 7874
+encoding utf-8
+Sheet 1 1
+Title "Using Arduino nano for ATtiny85 fuse re-programming"
+Date "2017-03-05"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Q_NPN_EBC Q1
+U 1 1 58BBBA03
+P 2050 1850
+F 0 "Q1" H 2250 1900 50  0000 L CNN
+F 1 "Q_NPN_EBC" H 2250 1800 50  0000 L CNN
+F 2 "" H 2250 1950 50  0001 C CNN
+F 3 "" H 2050 1850 50  0001 C CNN
+	1    2050 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR3
+U 1 1 58BBBC5B
+P 2150 2150
+F 0 "#PWR3" H 2150 1900 50  0001 C CNN
+F 1 "GND" H 2150 2000 50  0000 C CNN
+F 2 "" H 2150 2150 50  0001 C CNN
+F 3 "" H 2150 2150 50  0001 C CNN
+	1    2150 2150
+	1    0    0    -1  
+$EndComp
+Text GLabel 2850 1550 0    55   Input ~ 0
+SCI
+Text GLabel 4250 1550 2    55   Output ~ 0
+SDO
+Text GLabel 4250 1700 2    55   Input ~ 0
+SII
+Text GLabel 4250 1850 2    55   Input ~ 0
+SDI
+$Comp
+L +5V #PWR7
+U 1 1 58BBBCB9
+P 4250 1300
+F 0 "#PWR7" H 4250 1150 50  0001 C CNN
+F 1 "+5V" H 4250 1440 50  0000 C CNN
+F 2 "" H 4250 1300 50  0001 C CNN
+F 3 "" H 4250 1300 50  0001 C CNN
+	1    4250 1300
+	1    0    0    -1  
+$EndComp
+NoConn ~ 3000 1700
+$Comp
+L R R1
+U 1 1 58BBBDBE
+P 1600 1400
+F 0 "R1" V 1680 1400 50  0000 C CNN
+F 1 "1K" V 1600 1400 50  0000 C CNN
+F 2 "" V 1530 1400 50  0001 C CNN
+F 3 "" H 1600 1400 50  0001 C CNN
+	1    1600 1400
+	0    1    1    0   
+$EndComp
+$Comp
+L +12V #PWR1
+U 1 1 58BBBE4D
+P 1300 1300
+F 0 "#PWR1" H 1300 1150 50  0001 C CNN
+F 1 "+12V" H 1300 1440 50  0000 C CNN
+F 2 "" H 1300 1300 50  0001 C CNN
+F 3 "" H 1300 1300 50  0001 C CNN
+	1    1300 1300
+	1    0    0    -1  
+$EndComp
+Text GLabel 1300 1850 0    55   Input ~ 0
+RESET
+$Comp
+L GND #PWR4
+U 1 1 58BBBF1C
+P 2850 2050
+F 0 "#PWR4" H 2850 1800 50  0001 C CNN
+F 1 "GND" H 2850 1900 50  0000 C CNN
+F 2 "" H 2850 2050 50  0001 C CNN
+F 3 "" H 2850 2050 50  0001 C CNN
+	1    2850 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2
+U 1 1 58BBC053
+P 1600 1850
+F 0 "R2" V 1680 1850 50  0000 C CNN
+F 1 "1K" V 1600 1850 50  0000 C CNN
+F 2 "" V 1530 1850 50  0001 C CNN
+F 3 "" H 1600 1850 50  0001 C CNN
+	1    1600 1850
+	0    1    1    0   
+$EndComp
+$Comp
+L ARDUINO_NANO ARDUINO1
+U 1 1 58BBC267
+P 2750 4550
+F 0 "ARDUINO1" H 2750 5400 70  0000 C CNN
+F 1 "ARDUINO_NANO" V 2750 4550 70  0000 C CNN
+F 2 "" H 2750 4550 60  0000 C CNN
+F 3 "" H 2750 4550 60  0000 C CNN
+	1    2750 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR5
+U 1 1 58BBC3D6
+P 3600 3600
+F 0 "#PWR5" H 3600 3450 50  0001 C CNN
+F 1 "+5V" H 3600 3740 50  0000 C CNN
+F 2 "" H 3600 3600 50  0001 C CNN
+F 3 "" H 3600 3600 50  0001 C CNN
+	1    3600 3600
+	1    0    0    -1  
+$EndComp
+Text GLabel 3550 5200 2    55   Output ~ 0
+RESET
+Text GLabel 1950 5200 0    55   Output ~ 0
+SCI
+Text GLabel 1950 5100 0    55   Input ~ 0
+SDO
+Text GLabel 1950 5000 0    55   Output ~ 0
+SII
+Text GLabel 1950 4900 0    55   Output ~ 0
+SDI
+$Comp
+L GND #PWR2
+U 1 1 58BBC6B3
+P 1900 4200
+F 0 "#PWR2" H 1900 3950 50  0001 C CNN
+F 1 "GND" H 1900 4050 50  0000 C CNN
+F 2 "" H 1900 4200 50  0001 C CNN
+F 3 "" H 1900 4200 50  0001 C CNN
+	1    1900 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR6
+U 1 1 58BBC6FB
+P 3600 4000
+F 0 "#PWR6" H 3600 3750 50  0001 C CNN
+F 1 "GND" H 3600 3850 50  0000 C CNN
+F 2 "" H 3600 4000 50  0001 C CNN
+F 3 "" H 3600 4000 50  0001 C CNN
+	1    3600 4000
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2150 3800
+NoConn ~ 2150 3900
+NoConn ~ 2150 4000
+NoConn ~ 2150 4200
+NoConn ~ 2150 4300
+NoConn ~ 2150 4400
+NoConn ~ 2150 4500
+NoConn ~ 2150 4600
+NoConn ~ 2150 4700
+NoConn ~ 2150 4800
+NoConn ~ 3350 5100
+NoConn ~ 3350 5000
+NoConn ~ 3350 4900
+NoConn ~ 3350 4800
+NoConn ~ 3350 4700
+NoConn ~ 3350 4600
+NoConn ~ 3350 4500
+NoConn ~ 3350 4400
+NoConn ~ 3350 4300
+NoConn ~ 3350 4200
+NoConn ~ 3350 4100
+NoConn ~ 3350 4000
+Text Notes 2150 5600 0    59   ~ 0
+Arduino nano as programmer
+Text Notes 1550 2750 0    59   ~ 0
+ATtiny85 connected for high-voltage serial programming
+$Comp
+L ATtiny85 U1
+U 1 1 58BBD5FD
+P 3550 1600
+F 0 "U1" H 3550 2000 59  0000 C CNN
+F 1 "ATTINY85" V 3550 1550 59  0000 C CNN
+F 2 "" H 3550 1300 59  0001 C CNN
+F 3 "" H 3550 1300 59  0001 C CNN
+	1    3550 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 1300 4250 1400
+Wire Wire Line
+	1750 1850 1850 1850
+Wire Wire Line
+	2150 2050 2150 2150
+Wire Wire Line
+	1300 1850 1450 1850
+Wire Wire Line
+	4250 1400 4100 1400
+Wire Wire Line
+	1950 5200 2150 5200
+Wire Wire Line
+	1950 5100 2150 5100
+Wire Wire Line
+	1950 5000 2150 5000
+Wire Wire Line
+	1950 4900 2150 4900
+Wire Wire Line
+	3350 5200 3550 5200
+Wire Wire Line
+	3350 3800 3600 3800
+Wire Wire Line
+	3600 3800 3600 3600
+Wire Wire Line
+	3600 4000 3600 3900
+Wire Wire Line
+	3600 3900 3350 3900
+Wire Wire Line
+	3000 1550 2850 1550
+Wire Wire Line
+	4250 1550 4100 1550
+Wire Wire Line
+	4100 1700 4250 1700
+Wire Wire Line
+	4250 1850 4100 1850
+Wire Wire Line
+	2850 2050 2850 1850
+Wire Wire Line
+	2850 1850 3000 1850
+Wire Wire Line
+	1300 1400 1300 1300
+Wire Wire Line
+	1300 1400 1450 1400
+Wire Wire Line
+	1750 1400 3000 1400
+Wire Wire Line
+	2150 1650 2150 1400
+Connection ~ 2150 1400
+Wire Wire Line
+	1900 4200 1900 4100
+Wire Wire Line
+	1900 4100 2150 4100
+$EndSCHEMATC
